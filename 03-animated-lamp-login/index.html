@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Animated Lamp Login - CSS Learning Lab</title>
+    <link rel="stylesheet" href="/03/style.css">
+</head>
+<body class="light-off"> <!-- Inicia con la luz apagada por defecto -->
+
+    <div class="scene">
+        <!-- Lámpara Animada con su palanquita/cuerda -->
+        <div class="lamp-container" id="lampToggle">
+            <div class="lamp-head"></div>
+            <div class="lamp-string">
+                <div class="lamp-pull"></div>
+            </div>
+            <div class="lamp-arm"></div>
+            <div class="lamp-base"></div>
+        </div>
+
+        <!-- Formulario de Acceso -->
+        <div class="login-card">
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Usuario" required />
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Contraseña" required />
+                </div>
+                <button type="button">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Crédito del autor original -->
+    <footer style="position: absolute; bottom: 15px; font-family: sans-serif; font-size: 0.85rem; color: #a0a0a0; text-align: center; width: 100%;">
+        Inspired by <a href="https://www.youtube.com/@codewithlord" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">CodewithLord</a>
+    </footer>
+
+    <script src="/03/script.js"></script>
+</body>
+</html>

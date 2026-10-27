@@ -1,0 +1,76 @@
+/* Centrar todo en la pantalla */
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e1e24; /* Un gris oscuro muy agradable a la vista */
+    color: #ffffff;      /* Para que los textos y créditos se lean bien */
+}
+
+/* Contenedor principal que marca el área del menú */
+.menu-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+/* Botón central: se coloca exactamente en el centro de su contenedor */
+.center-toggle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 60px;
+    height: 60px;
+    background: #333;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1.5rem;
+}
+
+/* Órbita contenedora */
+.orbit-track {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+}
+
+/* Nodos circulares: nacen exactamente en el centro (top 50%, left 50%) */
+.menu-node {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    
+    /* Aumentamos el tamaño del círculo */
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Aumentamos el tamaño del ícono (emoji) */
+    font-size: 1.6rem;
+    
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+/* LA MAGIA: Al activarse, sumamos el desplazamiento (--tx, --ty) manteniendo el centrado */
+.menu-container.active .menu-node {
+    transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) scale(1);
+    opacity: 1;
+}

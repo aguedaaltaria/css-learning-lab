@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Learning Lab - Panel Principal</title>
+    <!-- CSS Vanilla -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Learning Lab</h1>
+        <p class="subtitle">Laboratorio de prácticas y estudios de CSS frontend</p>
+        
+        <!-- Lista vacía que JavaScript llenará dinámicamente -->
+        <ul id="exercise-list"></ul>
+        
+        <!-- Mensaje por si no hay laboratorios -->
+        <div id="empty-message" class="empty" style="display: none;">
+            Aún no hay laboratorios creados. ¡Agrega el primero!
+        </div>
+
+        <!-- Botón de acceso directo al Laboratorio 01 -->
+        <div class="action-container" style="margin-top: 25px; text-align: center;">
+            <a href="/01" class="btn-direct">Ver Laboratorio 01: Radial Dock Menu</a>
+        </div>
+        
+        <div class="action-container" style="margin-top: 15px; text-align: center;">
+            <a href="/02" class="btn-direct">Ver Laboratorio 02: Sliding Auth Panel</a>
+        </div>
+
+        <div class="action-container" style="margin-top: 15px; text-align: center;">
+            <a href="/03" class="btn-direct">Ver Laboratorio 03: Animated Lamp Login</a>
+        </div>
+
+        <div class="action-container" style="margin-top: 15px; text-align: center;">
+            <a href="/04" class="btn-direct">Ver Laboratorio 04: Modern Menu (Dinámico con JS)</a>
+        </div>
+
+        <div class="action-container" style="margin-top: 15px; text-align: center;">
+            <a href="/05" class="btn-direct">Ver Laboratorio 05: CSS Spinner Animation</a>
+        </div>
+    </div>
+
+    <!-- JS Vanilla -->
+    <script src="/static/script.js"></script>
+</body>
+</html>

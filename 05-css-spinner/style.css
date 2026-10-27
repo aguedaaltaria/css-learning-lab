@@ -1,0 +1,30 @@
+/* Centrar todo en pantalla con un fondo oscuro elegante */
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0b0f19;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* El Spinner giratorio */
+.spinner {
+    background-color: orangered;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 25px solid white;
+    border-top: 25px solid indigo;
+    
+    /* Animación continua de rotación */
+    animation: ani 2.5s linear infinite;
+}
+
+/* Definición del giro de 360 grados */
+@keyframes ani {
+    to {
+        transform: rotate(360deg);
+    }
+}

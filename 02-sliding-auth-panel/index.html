@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sliding Auth Panel - CSS Learning Lab</title>
+    <link rel="stylesheet" href="/02/style.css">
+</head>
+<body>
+
+    <!-- Contenedor principal que controla el estado del panel -->
+    <div class="container" id="mainContainer">
+        
+        <!-- Formulario de Registro (Izquierda) -->
+        <div class="form-container sign-up-container">
+            <form>
+                <h2>Crear Cuenta</h2>
+                <input type="text" placeholder="Nombre" />
+                <input type="email" placeholder="Correo" />
+                <input type="password" placeholder="Contraseña" />
+                <button type="button">Registrarse</button>
+            </form>
+        </div>
+
+        <!-- Formulario de Iniciar Sesión (Derecha) -->
+        <div class="form-container sign-in-container">
+            <form>
+                <h2>Iniciar Sesión</h2>
+                <input type="email" placeholder="Correo" />
+                <input type="password" placeholder="Contraseña" />
+                <button type="button">Entrar</button>
+            </form>
+        </div>
+
+        <!-- Panel Deslizante (Overlay) -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h2>¡Hola de nuevo!</h2>
+                    <p>Para mantenerte conectado, inicia sesión con tus datos</p>
+                    <button class="ghost" id="signInBtn">Iniciar Sesión</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h2>¡Bienvenido!</h2>
+                    <p>Introduce tus datos personales y comienza con nosotros</p>
+                    <button class="ghost" id="signUpBtn">Registrarse</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Crédito del autor original -->
+    <footer style="position: absolute; bottom: 15px; font-family: sans-serif; font-size: 0.85rem; color: #a0a0a0; text-align: center; width: 100%;">
+        Inspired by <a href="https://www.youtube.com/@CodewithPatel-jcm-jsk" target="_blank" style="color: #ff4b2b; text-decoration: none; font-weight: bold;">Code with Patel</a>
+    </footer>
+
+    <script src="/02/script.js"></script>
+</body>
+</html>

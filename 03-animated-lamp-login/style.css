@@ -1,0 +1,153 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.4s ease;
+}
+
+/* Estado: Luz Apagada */
+body.light-off {
+    background: #090d16;
+}
+
+body.light-off .login-card {
+    background: #111827;
+    border-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+body.light-off .lamp-head {
+    background: #1e293b;
+    box-shadow: none;
+}
+
+/* Estado: Luz Encendida */
+body.light-on {
+    background: #1e293b;
+}
+
+body.light-on .login-card {
+    background: #334155;
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
+}
+
+body.light-on .lamp-head {
+    background: #38bdf8;
+    box-shadow: 0 0 35px #38bdf8, 0 0 70px rgba(56, 189, 248, 0.6);
+}
+
+.scene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Estructura de la Lámpara */
+.lamp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.lamp-head {
+    width: 70px;
+    height: 35px;
+    background: #38bdf8;
+    border-radius: 35px 35px 0 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+/* La cuerda y la palanca */
+.lamp-string {
+    width: 2px;
+    height: 30px;
+    background: #94a3b8;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: height 0.15s ease;
+}
+
+.lamp-pull {
+    width: 10px;
+    height: 14px;
+    background: #cbd5e1;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -14px;
+    left: -4px;
+}
+
+/* Animación de jalón cuando se hace clic */
+.lamp-container.pull .lamp-string {
+    height: 45px; /* Se estira al jalar */
+}
+
+.lamp-arm {
+    width: 4px;
+    height: 35px;
+    background: #64748b;
+}
+
+.lamp-base {
+    width: 35px;
+    height: 8px;
+    background: #475569;
+    border-radius: 4px;
+}
+
+/* Tarjeta de Inicio de Sesión */
+.login-card {
+    background: #1e293b;
+    padding: 30px 40px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.login-card h2 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    color: #38bdf8;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 14px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: #fff;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #38bdf8;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 10px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}

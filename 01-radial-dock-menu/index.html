@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Radial Básico</title>
+    <link rel="stylesheet" href="/01/style.css">
+</head>
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="menu-container">
+        
+        <!-- Botón del centro -->
+        <div class="center-toggle" id="menuToggle">
+            <span>+</span>
+        </div>
+
+        <!-- Órbita de elementos (Configurada por defecto con 3 íconos) -->
+        <div class="orbit-track">
+            <!-- Círculo 1 (Arriba) -->
+            <div class="menu-node" style="--tx: 0px; --ty: -90px;">🏠</div>
+            
+            <!-- Círculo 2 (Abajo a la izquierda) -->
+            <div class="menu-node" style="--tx: -80px; --ty: 60px;">✉️</div>
+            
+            <!-- Círculo 3 (Abajo a la derecha) -->
+            <div class="menu-node" style="--tx: 80px; --ty: 60px;">⚙️</div>
+
+            <!-- ===================================================== -->
+            <!-- COMENTARIOS PARA AMPLIAR A 4 O 5 ELEMENTOS:            -->
+            <!-- Si quieres 4, descomenta este:                       -->
+            <!-- <div class="menu-node" style="--tx: -100px; --ty: -20px;">👤</div> -->
+            <!--                                                       -->
+            <!-- Si quieres 5, descomenta ambos:                       -->
+            <!-- <div class="menu-node" style="--tx: 100px; --ty: -20px;">📁</div> -->
+            <!-- ===================================================== -->
+        </div>
+
+    </div>
+
+    <!-- Crédito del autor original para fines educativos y evitar plagio -->
+    <footer style="position: absolute; bottom: 20px; font-family: sans-serif; font-size: 0.85rem; color: #a0a0a0; text-align: center; width: 100%;">
+        Inspired by <a href="https://www.youtube.com/@CodeHackWithPRC" target="_blank" style="color: #00ffcc; text-decoration: none; font-weight: bold;">Code Hack</a>
+    </footer>
+
+    <script src="/01/script.js"></script>
+</body>
+</html>
